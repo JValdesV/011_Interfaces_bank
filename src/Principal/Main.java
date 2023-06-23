@@ -1,5 +1,7 @@
 package Principal;
 
+import Clases.Contador;
+import Clases.ControlBonificacion;
 import Clases.Funcionario;
 import Clases.Gerente;
 
@@ -26,6 +28,21 @@ public class Main {
 		System.out.println("El usuario está autenticado: "+autenticado);
 		
 		System.out.println(andres.getBonificacion());
+		
+		Contador juan = new Contador();
+		
+		juan.setSalario(1000000);
+		
+		
+		ControlBonificacion controlBonificacion = new ControlBonificacion();
+		
+		//controlBonificacion.registrarBonificacion(javier);
+		//controlBonificacion.registrarBonificacion(andres);
+		
+		controlBonificacion.registrarBonificacion(juan);
+		System.out.println("***** Registro de las bonificaciones ******");
+		controlBonificacion.mostrarSuma();
+		
 		
 		
 	}

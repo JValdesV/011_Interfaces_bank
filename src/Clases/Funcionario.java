@@ -1,6 +1,6 @@
 package Clases;
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	private String nombre;
 	private String documento;
@@ -36,9 +36,7 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
-	public double getBonificacion() {
-		return this.salario * 0.1;
-	}
+	public abstract double getBonificacion();
 
 	@Override
 	public String toString() {

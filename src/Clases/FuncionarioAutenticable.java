@@ -1,7 +1,7 @@
 package Clases;
 
-public class Gerente extends FuncionarioAutenticable{
-	
+public class FuncionarioAutenticable {
+
 	private String clave;
 
 	public String getClave() {
@@ -20,18 +20,6 @@ public class Gerente extends FuncionarioAutenticable{
 		}
 		
 	}
-	
-	//Metodo sobreescrito
-	//La misma firma
-	/*
-	@Override
-	public double getBonificacion() {
-		return super.getSalario();
-	}
-	*/
-	//Sobrecarga de metodos 
-	//Se agregan nuevos parametros
-	
 	
 	
 }

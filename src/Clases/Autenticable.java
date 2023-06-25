@@ -1,6 +1,6 @@
 package Clases;
 
-public class FuncionarioAutenticable {
+public abstract class Autenticable extends Funcionario{
 
 	private String clave;
 
@@ -20,6 +20,8 @@ public class FuncionarioAutenticable {
 		}
 		
 	}
+
+	
 	
 	
 }

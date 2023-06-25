@@ -1,6 +1,6 @@
 package Clases;
 
-public class Cliente {
+public class Cliente extends Autenticable{
 	
 	//Atributos
 	private int documento;

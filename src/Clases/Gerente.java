@@ -1,6 +1,6 @@
 package Clases;
 
-public class Gerente extends FuncionarioAutenticable{
+public class Gerente extends Autenticable{
 	
 	private String clave;
 
@@ -19,6 +19,12 @@ public class Gerente extends FuncionarioAutenticable{
 			return false;
 		}
 		
+	}
+
+	@Override
+	public double getBonificacion() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	//Metodo sobreescrito

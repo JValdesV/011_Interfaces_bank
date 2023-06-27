@@ -1,9 +1,9 @@
 package Clases;
 
-public class Cliente extends Autenticable{
+public class Cliente implements Autenticable{
 	
 	//Atributos
-	private int documento;
+	private String documento;
 	private int telefono;
 	private String nombre;
 	private static int contar = 0;
@@ -15,7 +15,7 @@ public class Cliente extends Autenticable{
 		contar();
 	}
 	
-	public Cliente(int documento, int telefono, String nombre) {
+	public Cliente(String documento, int telefono, String nombre) {
 		this.documento = documento;
 		this.telefono = telefono;
 		this.nombre = nombre;
@@ -28,12 +28,12 @@ public class Cliente extends Autenticable{
 	}
 
 
-	public int getDocumento() {
+	public String getDocumento() {
 		return documento;
 	}
 
 
-	public void setDocumento(int documento) {
+	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
 
@@ -64,6 +64,29 @@ public class Cliente extends Autenticable{
 	public static int getContar() {
 		return contar;
 	}
+
+	@Override
+	public String getClave() {
+		return this.getClave();
+	}
+
+	@Override
+	public void setClave(String clave) {
+		this.setClave(clave);
+	}
+
+	@Override
+	public boolean iniciarSesion(String clave) {
+		if(clave == this.getClave()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+
+	
+	
 	
 	
 	

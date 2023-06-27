@@ -1,25 +1,12 @@
 package Clases;
 
-public abstract class Autenticable extends Funcionario{
+public interface Autenticable {
 
-	private String clave;
+	public String getClave();
 
-	public String getClave() {
-		return clave;
-	}
-
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
+	public void setClave(String clave);
 	
-	public boolean iniciarSesion(String clave) {
-		if(clave == this.clave) {
-			return true;
-		}else {
-			return false;
-		}
-		
-	}
+	public boolean iniciarSesion(String clave);
 
 	
 	

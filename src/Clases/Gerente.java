@@ -1,6 +1,6 @@
 package Clases;
 
-public class Gerente extends Autenticable{
+public class Gerente extends Funcionario implements Autenticable{
 	
 	private String clave;
 
@@ -23,20 +23,8 @@ public class Gerente extends Autenticable{
 
 	@Override
 	public double getBonificacion() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.getSalario();
 	}
-	
-	//Metodo sobreescrito
-	//La misma firma
-	/*
-	@Override
-	public double getBonificacion() {
-		return super.getSalario();
-	}
-	*/
-	//Sobrecarga de metodos 
-	//Se agregan nuevos parametros
 	
 	
 	

@@ -8,4 +8,5 @@ public class Contador extends Funcionario{
 		return super.getSalario() * 0.3;
 	}
 
+
 }

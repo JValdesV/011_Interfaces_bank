@@ -7,12 +7,14 @@ public class Cliente implements Autenticable{
 	private int telefono;
 	private String nombre;
 	private static int contar = 0;
+	private AutenticacionUtil autentificador;
 	
 	
 	//Constructores
 	
 	public Cliente() {
 		contar();
+		this.autentificador = new AutenticacionUtil();
 	}
 	
 	public Cliente(String documento, int telefono, String nombre) {
@@ -67,17 +69,17 @@ public class Cliente implements Autenticable{
 
 	@Override
 	public String getClave() {
-		return this.getClave();
+		return this.autentificador.getClave();
 	}
 
 	@Override
 	public void setClave(String clave) {
-		this.setClave(clave);
+		this.autentificador.setClave(clave);
 	}
 
 	@Override
 	public boolean iniciarSesion(String clave) {
-		if(clave == this.getClave()) {
+		if(clave == this.autentificador.getClave()) {
 			return true;
 		}else {
 			return false;

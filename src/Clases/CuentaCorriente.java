@@ -8,9 +8,9 @@ public class CuentaCorriente extends Cuenta implements Tributacion{
 	
 	
 	@Override
-	public boolean saca(double valor) {
+	public void saca(double valor) {
 		double valorARetirar = valor + 0.2;
-		return super.saca(valorARetirar);
+		super.saca(valorARetirar);
 	}
 
 
